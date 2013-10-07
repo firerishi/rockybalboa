@@ -26,24 +26,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-// database
-var dbUrl = "rockybalboa";
-var collections = ['books'];
-
-var db = require('mongojs').connect(dbUrl, collections);
-
 // routes
 app.get('/', routes.index);
-
-app.get('/books', function(req, res){
-	db.books.find({}, function(err, books){
-		if (err) return;
-		var response = {
-			books: books
-		}
-		res.json(books);
-	});
-});
+app.get('/books', routes.books.all);
+app.get('/books/:id', routes.books.one);
+app.post('/books', routes.books.create);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
