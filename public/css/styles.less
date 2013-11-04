@@ -1,0 +1,238 @@
+body {
+  // padding: 50px;
+  background: #555;
+}
+
+@font-family: 'Lobster', cursive;
+@font-family: 'Squada One', cursive;
+@font-family: 'Source Sans Pro', sans-serif;
+@font-family: 'PT Serif', serif;
+@font-family: 'Open Sans', sans-serif;
+@font-family: 'Titillium Web', sans-serif;
+
+// a {
+//   color: #00B7FF;
+// }
+
+.csstransitions (@property: all, @timing: 0.3s) {
+	-webkit-transition: @property @timing ease;                  
+    -moz-transition: @property @timing ease;                 
+    -o-transition: @property @timing ease;   
+    -ms-transition: @property @timing ease;          
+    transition: @property @timing ease;
+}
+
+ul {
+	list-style: none;
+}
+
+.nav{
+	width: 60%;
+	border-top: 20px solid #5684a0;
+	>li {
+		float: right;
+		>a:hover,
+		>a:focus {
+			background: none;
+			text-decoration: underline;
+		}
+	}
+}
+
+
+.jumbotron {
+	background: none;
+	margin-top: 30px;
+	h1 {
+		font-size: 2em;
+		color: #454545;
+	}
+
+	#pronounce {
+		font-weight: lighter;
+		color: #555;
+	}
+	#pro-roles {
+		margin-top: 20px;
+		color: #666;
+		.dsgnr {
+			font-family: 'Lobster';
+		}
+		.engr {
+			font-family: 'Squada One';
+			font-size: 1.2em
+		}
+	}
+
+	#official-role {
+		margin-top: 20px;
+		color: #777;
+		font-weight: lighter;
+		font-size: 0.9em;
+		font-family: 'PT Serif';
+		a {
+			color: #E25368;
+			text-decoration: none;
+			font-family: 'Helvetica Neue';
+			font-size: 1em;
+			&:hover {
+				background: #E51937;
+				color: #FEFEFE;
+			}
+		}
+	}
+
+	#personal-quote {
+		color: rgba(138, 163, 177, 0.79);
+		margin-top: 30px;
+		font-family: 'Source Sans Pro';
+		font-style: italic;
+	}
+
+	#location-marker {
+		font-family: 'Titillium Web';
+		color: rgba(203, 87, 39, 0.5);
+	}
+
+	#conv-nav {
+		margin-top: 100px;
+		text-align: center;
+		font-size: 0.9em;
+		color: #555;
+		font-family: 'Titillium Web';
+		// padding-top: 20px;
+		// border-top: 1px solid #EFEFEF;
+	}
+}
+
+#nav-shelf {
+	width: 60%;
+	border-top: 20px solid #5684a0;
+	position: fixed;
+	top: 0px;
+	.csstransitions(left, 0.5s);
+	z-index: 5;
+	#menu-bar {
+		top: 25px;
+		position: fixed;
+		padding: 7px 20px;
+		background: #ede66f;
+		color: #555;
+		.csstransitions(left, 0.5s);
+		&:hover {
+			color: #FEFEFE;
+			cursor: pointer;
+		}
+	}
+	#menu-bar:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -13px;
+		width: 0;
+		height: 0;
+		border-top: 17px solid #ede66f;
+		border-right: 1em solid transparent;
+	}
+	#menu-bar:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		right: -13px;
+		width: 0;
+		height: 0;
+		border-bottom: 17px solid #ede66f;
+		border-right: 1em solid transparent;
+	}
+}
+
+.show-menu-shelf {
+	left: 10%;
+}
+
+#main-nav {
+	float: left;
+	position: fixed;
+	border-top: 20px solid #242424;
+	padding: 0;
+	width: 10%;
+	> li {
+		background: #777;
+		width: 100%;
+		padding: 20px 0;
+		right: 0;
+		text-align: center;
+		&:hover {
+			background: #E2D049;
+			cursor: pointer;
+		}
+		&.active {
+			background: #C2B23E
+		}
+		> a {
+			color: #fefefe;
+			text-decoration: none;
+			span {
+				margin-right: 10px;
+			}
+		}
+	}
+}
+
+#main-content {
+	width: 60%;
+	display: inline-block;
+	.csstransitions(left, 0.5s);
+	position: fixed;
+	height: 100%;
+	background: white;
+	top: 20px;
+	z-index: 1;
+}
+
+#banner-image {
+	width: 40%;
+	float: right;
+	display: inline-block;
+	top: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 7;
+  &.shadow {
+  	box-shadow: 3px 3px 5px 6px #ccc;
+  }
+
+	&.books-banner {
+		background: url(../img/books_vlad.jpg) no-repeat center center fixed;
+		// Browser Specific
+		// -webkit-filter: blur(3px);
+		// -moz-filter: blur(3px);
+		// -o-filter: blur(3px);
+		// -ms-filter: blur(3px);
+		// filter: blur(10px);
+	}
+
+	&.home-banner {
+		background: url(../img/profilePic_sand.jpg) no-repeat center center;
+		background-size: 100% 100%;
+	}
+}
+
+#banner-name {
+	position: fixed;
+	top: 30%;
+	right: 25%;
+	color: #efefef;
+	vertical-align: middle;
+}
+
+.book_list {
+	p {
+		text-align: center;
+		margin-top: 30%;
+		font-size: 2em;
+		color: #aaa;
+		font-family: 'Lobster';
+	}
+}

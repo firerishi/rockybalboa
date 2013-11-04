@@ -1,0 +1,202 @@
+body {
+  background: #555;
+}
+ul {
+  list-style: none;
+}
+.nav {
+  width: 60%;
+  border-top: 20px solid #5684a0;
+}
+.nav > li {
+  float: right;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background: none;
+  text-decoration: underline;
+}
+.jumbotron {
+  background: none;
+  margin-top: 30px;
+}
+.jumbotron h1 {
+  font-size: 2em;
+  color: #454545;
+}
+.jumbotron #pronounce {
+  font-weight: lighter;
+  color: #555;
+}
+.jumbotron #pro-roles {
+  margin-top: 20px;
+  color: #666;
+}
+.jumbotron #pro-roles .dsgnr {
+  font-family: 'Lobster';
+}
+.jumbotron #pro-roles .engr {
+  font-family: 'Squada One';
+  font-size: 1.2em;
+}
+.jumbotron #official-role {
+  margin-top: 20px;
+  color: #777;
+  font-weight: lighter;
+  font-size: 0.9em;
+  font-family: 'PT Serif';
+}
+.jumbotron #official-role a {
+  color: #E25368;
+  text-decoration: none;
+  font-family: 'Helvetica Neue';
+  font-size: 1em;
+}
+.jumbotron #official-role a:hover {
+  background: #E51937;
+  color: #FEFEFE;
+}
+.jumbotron #personal-quote {
+  color: rgba(138, 163, 177, 0.79);
+  margin-top: 30px;
+  font-family: 'Source Sans Pro';
+  font-style: italic;
+}
+.jumbotron #location-marker {
+  font-family: 'Titillium Web';
+  color: rgba(203, 87, 39, 0.5);
+}
+.jumbotron #conv-nav {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  font-family: 'Titillium Web';
+}
+#nav-shelf {
+  width: 60%;
+  border-top: 20px solid #5684a0;
+  position: fixed;
+  top: 0px;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  z-index: 5;
+}
+#nav-shelf #menu-bar {
+  top: 25px;
+  position: fixed;
+  padding: 7px 20px;
+  background: #ede66f;
+  color: #555;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+}
+#nav-shelf #menu-bar:hover {
+  color: #FEFEFE;
+  cursor: pointer;
+}
+#nav-shelf #menu-bar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -13px;
+  width: 0;
+  height: 0;
+  border-top: 17px solid #ede66f;
+  border-right: 1em solid transparent;
+}
+#nav-shelf #menu-bar:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -13px;
+  width: 0;
+  height: 0;
+  border-bottom: 17px solid #ede66f;
+  border-right: 1em solid transparent;
+}
+.show-menu-shelf {
+  left: 10%;
+}
+#main-nav {
+  float: left;
+  position: fixed;
+  border-top: 20px solid #242424;
+  padding: 0;
+  width: 10%;
+}
+#main-nav > li {
+  background: #777;
+  width: 100%;
+  padding: 20px 0;
+  right: 0;
+  text-align: center;
+}
+#main-nav > li:hover {
+  background: #E2D049;
+  cursor: pointer;
+}
+#main-nav > li.active {
+  background: #c2b23e;
+}
+#main-nav > li > a {
+  color: #fefefe;
+  text-decoration: none;
+}
+#main-nav > li > a span {
+  margin-right: 10px;
+}
+#main-content {
+  width: 60%;
+  display: inline-block;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  position: fixed;
+  height: 100%;
+  background: white;
+  top: 20px;
+  z-index: 1;
+}
+#banner-image {
+  width: 40%;
+  float: right;
+  display: inline-block;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 7;
+}
+#banner-image.shadow {
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+#banner-image.books-banner {
+  background: url(../img/books_vlad.jpg) no-repeat center center fixed;
+}
+#banner-image.home-banner {
+  background: url(../img/profilePic_sand.jpg) no-repeat center center;
+  background-size: 100% 100%;
+}
+#banner-name {
+  position: fixed;
+  top: 30%;
+  right: 25%;
+  color: #efefef;
+  vertical-align: middle;
+}
+.book_list p {
+  text-align: center;
+  margin-top: 30%;
+  font-size: 2em;
+  color: #aaa;
+  font-family: 'Lobster';
+}

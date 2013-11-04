@@ -10,5 +10,10 @@
     "jade": "*",
     "nodeman": "~1.1.2",
     "mongojs": "~0.9.6"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-less": "~0.8.1"
   }
 }

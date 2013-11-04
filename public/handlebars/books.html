@@ -1,0 +1,13 @@
+<ul class="book_list">
+	{{#unless book}}
+		<p>Loading...</p>
+	{{/unless}}
+  {{#each book}}
+  <li>
+  	{{#if imageURL}}
+  		<img src='{{imageURL}}'/>
+  	{{/if}}
+  	{{name}} - <em>{{author}}</em>
+  </li>
+  {{/each}}
+</ul>
