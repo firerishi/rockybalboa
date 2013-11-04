@@ -21,6 +21,8 @@ define([
 
     render: function(){
 
+      $(this.el).removeClass();
+
       var template = Handlebars.compile(homeHB);
       $(this.el).html(template());
 

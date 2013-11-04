@@ -1,13 +1,16 @@
-<ul class="book_list">
+
+<ul id="booksContainer">
 	{{#unless book}}
 		<p>Loading...</p>
 	{{/unless}}
   {{#each book}}
-  <li>
+  <li class="item">
   	{{#if imageURL}}
-  		<img src='{{imageURL}}'/>
+  		<a href=''><img src='{{imageURL}}'/>
+      <!-- <span>{{name}} - <em>{{author}}</em></span> -->
+    </a>
   	{{/if}}
-  	{{name}} - <em>{{author}}</em>
+  	
   </li>
   {{/each}}
 </ul>

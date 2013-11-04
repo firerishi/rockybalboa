@@ -85,6 +85,9 @@ ul {
   transition: left 0.5s ease;
   z-index: 5;
 }
+#nav-shelf.books {
+  width: 100%;
+}
 #nav-shelf #menu-bar {
   top: 25px;
   position: fixed;
@@ -96,30 +99,11 @@ ul {
   -o-transition: left 0.5s ease;
   -ms-transition: left 0.5s ease;
   transition: left 0.5s ease;
+  box-shadow: 0px 1px 10px #aaa;
 }
 #nav-shelf #menu-bar:hover {
   color: #FEFEFE;
   cursor: pointer;
-}
-#nav-shelf #menu-bar:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: -13px;
-  width: 0;
-  height: 0;
-  border-top: 17px solid #ede66f;
-  border-right: 1em solid transparent;
-}
-#nav-shelf #menu-bar:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: -13px;
-  width: 0;
-  height: 0;
-  border-bottom: 17px solid #ede66f;
-  border-right: 1em solid transparent;
 }
 .show-menu-shelf {
   left: 10%;
@@ -165,6 +149,10 @@ ul {
   background: white;
   top: 20px;
   z-index: 1;
+  overflow: scroll;
+}
+#main-content.books {
+  width: 100%;
 }
 #banner-image {
   width: 40%;
@@ -181,6 +169,11 @@ ul {
 }
 #banner-image.books-banner {
   background: url(../img/books_vlad.jpg) no-repeat center center fixed;
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 #banner-image.home-banner {
   background: url(../img/profilePic_sand.jpg) no-repeat center center;
@@ -193,10 +186,21 @@ ul {
   color: #efefef;
   vertical-align: middle;
 }
-.book_list p {
+#booksContainer {
+  margin: 50px;
+}
+#booksContainer p {
   text-align: center;
   margin-top: 30%;
   font-size: 2em;
   color: #aaa;
   font-family: 'Lobster';
+}
+#booksContainer .item {
+  margin-bottom: 20px;
+  background: #eee;
+  padding: 10px;
+}
+#booksContainer .item span {
+  display: block;
 }

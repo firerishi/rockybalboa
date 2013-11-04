@@ -5,14 +5,16 @@ define([
   , 'backbone'
   , 'views/HomeView'
   , 'views/BookView'
+  , 'views/MusicView'
   , 'views/ui'
   , 'views/nav'
-], function($, _, Backbone, HomeView, BookView, UIView, NavView) {
+], function($, _, Backbone, HomeView, BookView, MusicView, UIView, NavView) {
   
   var AppRouter = Backbone.Router.extend({
     routes: {
 
         'books': 'showBooks'
+      , 'music': 'showMusic'
       , '*actions': 'defaultAction'
 
     }
@@ -30,7 +32,12 @@ define([
     app_router.on('route:showBooks', function (actions) { 
       var bookView = new BookView();
       bookView.render();
-    });   
+    });
+
+    app_router.on('route:showMusic', function (actions) { 
+      var musicView = new MusicView();
+      musicView.render();
+    });
 
     app_router.on('route:defaultAction', function (actions) { 
       var homeView = new HomeView();

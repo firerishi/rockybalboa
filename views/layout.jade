@@ -1,14 +1,24 @@
 doctype 5
 html
   head
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
     title Sri-Ni
 
+    
+    //- link(rel='stylesheet', href='/js/libs/bower_components/stroll/css/example.css')
+    //- link(rel='stylesheet', href='/js/libs/bower_components/stroll/css/stroll.css')
+    
     link(rel='stylesheet', href='/css/bootstrap/css/bootstrap.min.css')
+    
     link(rel='stylesheet', href='/css/styles.css')
+    
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Serif|Lobster|Open+Sans|Titillium+Web|Squada+One')
 
   body
     block content
+    
     script(data-main='/js/main',src='/js/libs/require/require.js')
     script(src='/js/libs/bootstrap/js/jquery-min.js')
     script(src='/js/libs/bootstrap/js/bootstrap.js')
+    

@@ -5,13 +5,30 @@
 // Their usage will become more apparent futher along in the tutorial.
 require.config({
   paths: {
-    jquery: 'libs/jquery/jquery-min',
-    underscore: 'libs/underscore/underscore-min',
-    backbone: 'libs/backbone/backbone-min',
-    bootstrap: 'libs/bootstrap/js/bootstrap.min',
-    text: 'text',
-    handlebars: 'libs/handlebars/handlebars',
-    tpl: '../handlebars'
+      jquery: 'libs/jquery/jquery-min'
+    , underscore: 'libs/underscore/underscore-min'
+    , backbone: 'libs/backbone/backbone-min'
+    , bootstrap: 'libs/bootstrap/js/bootstrap.min'
+    , text: 'text'
+    , handlebars: 'libs/handlebars/handlebars'
+    , tpl: '../handlebars'
+
+    , eventie: 'libs/bower_components/eventie'
+    , 'doc-ready': 'libs/bower_components/doc-ready'
+    , eventEmitter: 'libs/bower_components/eventEmitter'
+    , 'get-style-property': 'libs/bower_components/get-style-property'
+    , 'get-size': 'libs/bower_components/get-size'
+    , 'matches-selector': 'libs/bower_components/matches-selector'
+    , outlayer: 'libs/bower_components/outlayer'
+    , masonry: 'libs/bower_components/masonry'
+
+    , stroll: 'libs/bower_components/stroll'
+
+    // , modernizr: 'libs/modernizr.custom'
+    // , msnry: 'libs/masonry.pkgd.min'
+    // , imagesLoaded: 'libs/imagesLoaded'
+    // , classie: 'libs/classie'
+    // , animOnScroll: 'libs/AnimOnScroll'
   }
 });
 
