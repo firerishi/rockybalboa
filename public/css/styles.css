@@ -1,8 +1,26 @@
-body {
-  background: #555;
-}
 ul {
   list-style: none;
+}
+h4 {
+  font-family: 'Lobster';
+  font-size: 2em;
+  color: #999;
+  padding: 20px 200px;
+}
+h4:before {
+  content: '--- ';
+  color: #ccc;
+}
+h4:after {
+  content: ' ---';
+  color: #ccc;
+}
+h5 {
+  display: inline-block;
+  font-family: 'PT Serif';
+  font-size: 1.4em;
+  color: #555;
+  padding: 20px;
 }
 .nav {
   width: 60%;
@@ -19,6 +37,10 @@ ul {
 .jumbotron {
   background: none;
   margin-top: 30px;
+}
+.jumbotron .container {
+  width: 55%;
+  float: left;
 }
 .jumbotron h1 {
   font-size: 2em;
@@ -73,86 +95,69 @@ ul {
   color: #555;
   font-family: 'Titillium Web';
 }
-#nav-shelf {
-  width: 60%;
-  border-top: 20px solid #5684a0;
+#nav-area {
+  background: #777;
+  border-top: 20px solid #242424;
   position: fixed;
-  top: 0px;
-  -webkit-transition: left 0.5s ease;
-  -moz-transition: left 0.5s ease;
-  -o-transition: left 0.5s ease;
-  -ms-transition: left 0.5s ease;
-  transition: left 0.5s ease;
-  z-index: 5;
+  height: 100%;
 }
-#nav-shelf.books {
+#nav-area #main-nav {
+  margin: 0;
+  padding: 0;
+}
+#nav-area #main-nav > li {
+  background: #777;
   width: 100%;
+  padding: 20px;
 }
-#nav-shelf #menu-bar {
-  top: 25px;
-  position: fixed;
-  padding: 7px 20px;
-  background: #ede66f;
-  color: #555;
-  -webkit-transition: left 0.5s ease;
-  -moz-transition: left 0.5s ease;
-  -o-transition: left 0.5s ease;
-  -ms-transition: left 0.5s ease;
-  transition: left 0.5s ease;
-  box-shadow: 0px 1px 10px #aaa;
-}
-#nav-shelf #menu-bar:hover {
-  color: #FEFEFE;
+#nav-area #main-nav > li:hover {
+  background: #E2D049;
   cursor: pointer;
+}
+#nav-area #main-nav > li.active {
+  background: #c2b23e;
+}
+#nav-area #main-nav > li > a {
+  color: #fefefe;
+  text-decoration: none;
 }
 .show-menu-shelf {
   left: 10%;
 }
-#main-nav {
-  float: left;
-  position: fixed;
-  border-top: 20px solid #242424;
-  padding: 0;
-  width: 10%;
-}
-#main-nav > li {
-  background: #777;
-  width: 100%;
-  padding: 20px 0;
-  right: 0;
-  text-align: center;
-}
-#main-nav > li:hover {
-  background: #E2D049;
-  cursor: pointer;
-}
-#main-nav > li.active {
-  background: #c2b23e;
-}
-#main-nav > li > a {
-  color: #fefefe;
-  text-decoration: none;
-}
-#main-nav > li > a span {
-  margin-right: 10px;
-}
 #main-content {
-  width: 60%;
+  padding-left: 5%;
+  width: 100%;
   display: inline-block;
   -webkit-transition: left 0.5s ease;
   -moz-transition: left 0.5s ease;
   -o-transition: left 0.5s ease;
   -ms-transition: left 0.5s ease;
   transition: left 0.5s ease;
-  position: fixed;
+  border-top: 20px solid #5684a0;
   height: 100%;
   background: white;
   top: 20px;
-  z-index: 1;
-  overflow: scroll;
+  z-index: 3;
 }
 #main-content.books {
-  width: 100%;
+  text-align: center;
+}
+#main-content.books .books-reading {
+  text-align: left;
+  padding-left: 10%;
+}
+#main-content.books .books-reading li {
+  margin: 10px 0;
+}
+#main-content.books .books-reading img {
+  height: auto;
+  width: 100px;
+}
+#main-content p.loader-text {
+  margin-top: 10%;
+  font-size: 1.7em;
+  color: #aaa;
+  font-family: 'Titillium Web';
 }
 #banner-image {
   width: 40%;
@@ -164,43 +169,68 @@ ul {
   position: fixed;
   z-index: 7;
 }
-#banner-image.shadow {
-  box-shadow: 3px 3px 5px 6px #ccc;
-}
-#banner-image.books-banner {
-  background: url(../img/books_vlad.jpg) no-repeat center center fixed;
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
-}
 #banner-image.home-banner {
   background: url(../img/profilePic_sand.jpg) no-repeat center center;
   background-size: 100% 100%;
 }
-#banner-name {
-  position: fixed;
-  top: 30%;
-  right: 25%;
-  color: #efefef;
-  vertical-align: middle;
+/* AnimOnScroll */
+.grid {
+  max-width: 69em;
+  list-style: none;
+  margin: 30px auto;
+  padding: 0;
 }
-#booksContainer {
-  margin: 50px;
-}
-#booksContainer p {
-  text-align: center;
-  margin-top: 30%;
-  font-size: 2em;
-  color: #aaa;
-  font-family: 'Lobster';
-}
-#booksContainer .item {
-  margin-bottom: 20px;
-  background: #eee;
-  padding: 10px;
-}
-#booksContainer .item span {
+.grid li {
   display: block;
+  float: left;
+  padding: 7px;
+  width: 33%;
+  opacity: 0;
+}
+.grid li.shown,
+.no-js .grid li,
+.no-cssanimations .grid li {
+  opacity: 1;
+}
+.grid li a,
+.grid li img {
+  outline: none;
+  border: none;
+  display: block;
+  max-width: 100%;
+}
+/* Effect 4: fall perspective */
+.grid.effect-4 {
+  -webkit-perspective: 1300px;
+  -moz-perspective: 1300px;
+  perspective: 1300px;
+}
+.grid.effect-4 li.animate {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  -moz-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+  -webkit-animation: fallPerspective 0.8s ease-in-out forwards;
+  -moz-animation: fallPerspective 0.8s ease-in-out forwards;
+  animation: fallPerspective 0.8s ease-in-out forwards;
+}
+@-webkit-keyframes fallPerspective {
+  100% {
+    -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+@-moz-keyframes fallPerspective {
+  100% {
+    -moz-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+@keyframes fallPerspective {
+  100% {
+    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+    opacity: 1;
+  }
 }

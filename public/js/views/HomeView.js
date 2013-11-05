@@ -8,8 +8,6 @@ define([
 
   var BookView = Backbone.View.extend({
     el: "#main-content",
-    banner: "#banner-image",
-    bannerName: "#banner-name",
 
     // events: {
     //     'click .menu-bar'              : 'toggle_menu'
@@ -25,9 +23,6 @@ define([
 
       var template = Handlebars.compile(homeHB);
       $(this.el).html(template());
-
-      $(this.banner).removeClass().addClass('home-banner');
-      $(this.bannerName).html('');
 
     }
   });

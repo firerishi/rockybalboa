@@ -28,7 +28,7 @@ require.config({
     // , msnry: 'libs/masonry.pkgd.min'
     // , imagesLoaded: 'libs/imagesLoaded'
     // , classie: 'libs/classie'
-    // , animOnScroll: 'libs/AnimOnScroll'
+    , animOnScroll: 'libs/AnimOnScroll'
   }
 });
 

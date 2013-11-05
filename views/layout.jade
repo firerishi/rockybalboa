@@ -5,18 +5,20 @@ html
 
     title Sri-Ni
 
-    
-    //- link(rel='stylesheet', href='/js/libs/bower_components/stroll/css/example.css')
-    //- link(rel='stylesheet', href='/js/libs/bower_components/stroll/css/stroll.css')
-    
     link(rel='stylesheet', href='/css/bootstrap/css/bootstrap.min.css')
-    
+
     link(rel='stylesheet', href='/css/styles.css')
-    
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|PT+Serif|Lobster|Open+Sans|Titillium+Web|Squada+One')
+
+    script(src='/js/libs/modernizr.custom.js')
 
   body
     block content
+
+    script(src="/js/libs/masonry.pkgd.min.js")
+    script(src="/js/libs/imagesloaded.js")
+    script(src="/js/libs/classie.js")
+    script(src="/js/libs/AnimOnScroll.js")
     
     script(data-main='/js/main',src='/js/libs/require/require.js')
     script(src='/js/libs/bootstrap/js/jquery-min.js')
